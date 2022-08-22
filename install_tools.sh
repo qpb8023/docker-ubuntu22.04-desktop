@@ -21,11 +21,9 @@ echo "生成zh_CN.UTF-8语言环境"
 apt-get install language-pack-zh-hans  -y
 locale-gen zh_CN.UTF-8
 
-cat >/etc/profile
-export LANG=zh_CN.UTF-8
-export LC_ALL=zh_CN.UTF-8
-export LANGUAGE=zh_CN.UTF-8
-EOL
+echo export LANG=zh_CN.UTF-8 >>  /etc/profile
+echo export LC_ALL=zh_CN.UTF-8  >>  /etc/profile
+echo export LANGUAGE=zh_CN.UTF-8  >>  /etc/profile
 
 source /etc/profile
 
